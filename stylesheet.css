@@ -1,0 +1,135 @@
+/* defined color palette: 
+background: #FAFAFA (light grey)
+primary text: #000000 (black)
+primary color:#006064 (dark cyan)
+primary color text: #FFFFFF (white)
+accent color: #80DEEA (light cyan)
+accent color text:#000000 (black)
+
+ratio (accent contrast, white) = 1,54
+ratio (accent contrast, black) = 13,55
+ratio (primary color, white) = 7,34
+ratio (primary color, black) = 2,85
+*/
+
+/*style is divided into 5 areas: global, app bar, channels list, tab bar and messages*/
+/*-----GLOBAL--------------------------------------*/
+* {
+    /*font faces*/
+    font-family: Arial, sans-serif;
+    /*removing ugly spaces*/
+    margin-top: 0px;
+    margin-right: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+body{
+    /*colorful background*/
+    background-color: #FAFAFA;
+}
+
+button, strong {
+    /*capital letter font*/
+    text-transform: uppercase;
+}
+
+.selected {
+    /*font color of current selection is highlighted*/
+    color: #006064;
+}
+
+/*-----APP BAR-------------------------------------*/
+/*app bar styles*/
+.app-bar {
+    background-color: #006064;
+    color: #FFFFFF;
+}
+/*-----CHANNELS LIST-------------------------------*/
+/*channels list styles*/
+ul li {
+    background-color: white;
+    list-style-type: none; 
+    padding: 16px; 
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 48px;
+    /*no overlap between borders reached by border-bottom*/
+    border-bottom: 1px solid #F5F5F5;
+}
+
+li img {
+    /*center the icons vertically*/
+    vertical-align: middle;
+}
+
+li.selected {
+    /*left border for current channel*/
+    border-left: 4px solid #006064;
+}
+/*-----TAB BAR-------------------------------------*/
+/*tab bar styles*/
+#tab-bar {
+background-color: white;
+width: 100%;
+}
+
+#tab-bar button {
+    text-align: center;
+    background-color: white; 
+    border: none; 
+    font-size: 13px;
+    width: 33%;
+    height: 72px; 
+    padding: 16px;
+}
+
+#tab-bar img{
+    /*defines the appearance of icons inside the buttons*/
+    display: block; 
+    margin: auto;
+    margin-bottom: 4px;
+}
+
+#tab-bar button.selected {
+    /*current button is highlighted*/
+    border-bottom: 4px solid #006064;
+}
+/*-----MESSAGES------------------------------------*/
+.message {
+    /*this is the message container*/
+    width = 80%;
+    margin-bottom = 8px;
+    margin-left: 2.5%;
+}
+
+.message.own {
+    /*own messages are placed further on the right*/
+    margin-left: 17.5%;
+}
+
+.message h3, .messages h3 a{
+    /*defines font of metadata*/
+    font-size.medium;
+    color: black;
+}
+
+.message p {
+    /*message text*/
+    background-color: shite; 
+    padding: 16px;
+}
+
+.message button {
+    /*defines appearance of buttons*/
+    background-color: #CDDC39;
+    color: black; 
+    /*uppercase is already specified in GLOBAL*/
+}
+
+.message em{
+    /* #message emphasised information */
+    font-size: larger;
+    font-style: normal;
+}
